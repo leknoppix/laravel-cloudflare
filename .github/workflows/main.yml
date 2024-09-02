@@ -139,6 +139,39 @@ jobs:
         run: composer install --prefer-dist
       - name: Run the test suite
         run: phpdbg -qrr -dmemory_limit=3G vendor/bin/phpunit
+  laravel11:
+    needs: [ analysis ]
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: [ 8.3 ]
+    steps:
+      - uses: actions/checkout@v1
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv
+          coverage: none
+      - name: Force update laravel version
+        run: composer require "laravel/framework:^11.0" "orchestra/testbench:^9.0" --no-update
+      - name: Remove some dev dependencies
+        run: composer remove "ekino/phpstan-banned-code" "nunomaduro/larastan" "phpmd/phpmd" "phpstan/phpstan-deprecation-rules" "sebastian/phpcpd" "orchestra/database" --dev --no-update
+      - name: Cache composer dependencies
+        uses: actions/cache@v2
+        env:
+          cache-name: laravel-cloudflare-laravel11
+        with:
+          path: ~/.composer
+          key: php-${{ matrix.php }}-build-${{ env.cache-name }}-${{ hashFiles('**/composer.json') }}
+          restore-keys: |
+            php-${{ matrix.php }}-build-${{ env.cache-name }}-
+            php-${{ matrix.php }}-build-
+            php-${{ matrix.php }}-
+      - name: Install composer dependencies
+        run: composer install --prefer-dist
+      - name: Run the test suite
+        run: phpdbg -qrr -dmemory_limit=3G vendor/bin/phpunit
   laravel10-cov:
     needs: [analysis]
     runs-on: ubuntu-latest
