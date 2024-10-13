@@ -1,8 +1,8 @@
 <?php
 
-namespace Suitmedia\Cloudflare\Model\Concerns;
+namespace Leknoppix\Cloudflare\Model\Concerns;
 
-use Suitmedia\Cloudflare\CloudflareObserver;
+use Leknoppix\Cloudflare\CloudflareObserver;
 
 trait Cloudflare
 {

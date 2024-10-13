@@ -1,8 +1,8 @@
-[![Build Status](https://github.com/suitmedia/laravel-cloudflare/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/suitmedia/laravel-cloudflare/actions/workflows/main.yml)
-[![codecov](https://codecov.io/gh/suitmedia/laravel-cloudflare/branch/main/graph/badge.svg?token=5EK3CL6SYE)](https://codecov.io/gh/suitmedia/laravel-cloudflare)
-[![Total Downloads](https://poser.pugx.org/suitmedia/laravel-cloudflare/d/total.svg)](https://packagist.org/packages/suitmedia/laravel-cloudflare)
-[![Latest Stable Version](https://poser.pugx.org/suitmedia/laravel-cloudflare/v/stable.svg)](https://packagist.org/packages/suitmedia/laravel-cloudflare)
-[![License: MIT](https://poser.pugx.org/suitmedia/laravel-cloudflare/license.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://github.com/leknoppix/laravel-cloudflare/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/leknoppix/laravel-cloudflare/actions/workflows/main.yml)
+[![codecov](https://codecov.io/gh/leknoppix/laravel-cloudflare/branch/main/graph/badge.svg?token=5EK3CL6SYE)](https://codecov.io/gh/suitmedia/laravel-cloudflare)
+[![Total Downloads](https://poser.pugx.org/leknoppix/laravel-cloudflare/d/total.svg)](https://packagist.org/packages/leknoppix/laravel-cloudflare)
+[![Latest Stable Version](https://poser.pugx.org/leknoppix/laravel-cloudflare/v/stable.svg)](https://packagist.org/leknoppix/suitmedia/laravel-cloudflare)
+[![License: MIT](https://poser.pugx.org/leknoppix/laravel-cloudflare/license.svg)](https://opensource.org/licenses/MIT)
 
 # Laravel Cloudflare
 
@@ -26,7 +26,7 @@ This package offers easy ways to purge Cloudflare Cache on Model update.
 Install the package via Composer :
 
 ```sh
-$ composer require suitmedia/laravel-cloudflare
+$ composer require Leknoppix/laravel-cloudflare
 ```
 
 ### Laravel version compatibility
@@ -42,7 +42,7 @@ Add the package service provider in your `config/app.php`
 ```php
 'providers' => [
     // ...
-    Suitmedia\Cloudflare\ServiceProvider::class,
+    Leknoppix\Cloudflare\ServiceProvider::class,
 ];
 ```
 
@@ -53,7 +53,7 @@ Add the package's alias in your `config/app.php`
 ```php
 'aliases' => [
     // ...
-    'CloudflareCache' => Suitmedia\Cloudflare\Facade::class,
+    'CloudflareCache' => Leknoppix\Cloudflare\Facade::class,
 ];
 ```
 
@@ -62,7 +62,7 @@ Add the package's alias in your `config/app.php`
 Publish the package asset files using this `php artisan` command
 
 ```sh
-$ php artisan vendor:publish --provider="Suitmedia\Cloudflare\ServiceProvider"
+$ php artisan vendor:publish --provider="Leknoppix\Cloudflare\ServiceProvider"
 ```
 
 The command above would create new `laravel-cloudflare.php` file in your application's config directory.
@@ -122,7 +122,7 @@ CLOUDFLARE_AUTH_KEY=cloudflare-auth-key
 
 You can find the Cloudflare Auth Key in the [API Tokens](https://dash.cloudflare.com/profile/api-tokens) section on the profile page in your Cloudflare account. Copy the value of the Global API Key to your .env file.
 
-Add the `Suitmedia\Cloudflare\Model\Concerns\Cloudflare` to your model:
+Add the `Leknoppix\Cloudflare\Model\Concerns\Cloudflare` to your model:
 
 ```php
 <?php
@@ -130,7 +130,7 @@ Add the `Suitmedia\Cloudflare\Model\Concerns\Cloudflare` to your model:
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Suitmedia\Cloudflare\Model\Concerns\Cloudflare;
+use Leknoppix\Cloudflare\Model\Concerns\Cloudflare;
 
 class Post extends Model
 {
@@ -139,7 +139,7 @@ class Post extends Model
 
 ```
 
-Create a listener to the `Suitmedia\Cloudflare\Events\ModelHasUpdated` event:
+Create a listener to the `Leknoppix\Cloudflare\Events\ModelHasUpdated` event:
 
 ```php
 <?php
@@ -147,7 +147,7 @@ Create a listener to the `Suitmedia\Cloudflare\Events\ModelHasUpdated` event:
 namespace App\Listeners;
 
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Suitmedia\Cloudflare\Events\ModelHasUpdated;
+use Leknoppix\Cloudflare\Events\ModelHasUpdated;
 
 class PurgeCloudflareCache implements ShouldQueue
 {
@@ -178,7 +178,7 @@ Register the listener to the `EventServiceProvider`:
 
 ```php
 protected $listen = [
-    'Suitmedia\Cloudflare\Events\ModelHasUpdated' => [
+    'Leknoppix\Cloudflare\Events\ModelHasUpdated' => [
         'App\Listeners\PurgeCloudflareCache',
     ]
 ];
@@ -225,6 +225,7 @@ There are several method that can be used to purge the Cloudflare cache:
 
 ## Credits
 
+- [suitmedia/laravel-cloudflare]https://github.com/[suitmedia/laravel-cloudflare](https://github.com/suitmedia/laravel-cloudflare) - The original version
 - [richan-fongdasen/laravel-varnishable](https://github.com/richan-fongdasen/laravel-varnishable) - The purging cache flow was inspired by this package.
 
 ## License

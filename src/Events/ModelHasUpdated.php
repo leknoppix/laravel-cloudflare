@@ -1,6 +1,6 @@
 <?php
 
-namespace Suitmedia\Cloudflare\Events;
+namespace Leknoppix\Cloudflare\Events;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;

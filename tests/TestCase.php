@@ -1,6 +1,6 @@
 <?php
 
-namespace Suitmedia\Cloudflare\Tests;
+namespace Leknoppix\Cloudflare\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as BaseTest;
@@ -47,7 +47,7 @@ abstract class TestCase extends BaseTest
         $this->app = $app;
 
         return [
-            'Cloudflare' => \Suitmedia\Cloudflare\Facade::class,
+            'Cloudflare' => \Leknoppix\Cloudflare\Facade::class,
         ];
     }
 
@@ -66,7 +66,7 @@ abstract class TestCase extends BaseTest
             \Illuminate\Cache\CacheServiceProvider::class,
             \Illuminate\Database\DatabaseServiceProvider::class,
             \Illuminate\Events\EventServiceProvider::class,
-            \Suitmedia\Cloudflare\ServiceProvider::class,
+            \Leknoppix\Cloudflare\ServiceProvider::class,
         ];
     }
 

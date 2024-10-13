@@ -1,10 +1,10 @@
 <?php
 
-namespace Suitmedia\Cloudflare\Tests\Supports\Models;
+namespace Leknoppix\Cloudflare\Tests\Supports\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Suitmedia\Cloudflare\Model\Concerns\Cloudflare;
+use Leknoppix\Cloudflare\Model\Concerns\Cloudflare;
 
 class User extends AbstractModel
 {

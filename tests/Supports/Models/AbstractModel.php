@@ -1,6 +1,6 @@
 <?php
 
-namespace Suitmedia\Cloudflare\Tests\Supports\Models;
+namespace Leknoppix\Cloudflare\Tests\Supports\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Application;

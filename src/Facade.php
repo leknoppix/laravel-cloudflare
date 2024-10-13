@@ -1,6 +1,6 @@
 <?php
 
-namespace Suitmedia\Cloudflare;
+namespace Leknoppix\Cloudflare;
 
 use Illuminate\Support\Facades\Facade as BaseFacade;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Suitmedia\Cloudflare;
+namespace Leknoppix\Cloudflare;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\RequestOptions;

@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
-use Suitmedia\Cloudflare\Tests\Supports\Models\User;
+use Leknoppix\Cloudflare\Tests\Supports\Models\User;
 
 class UserFactory extends Factory
 {

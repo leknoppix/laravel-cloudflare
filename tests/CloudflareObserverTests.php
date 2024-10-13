@@ -1,11 +1,12 @@
 <?php
 
-namespace Suitmedia\Cloudflare\Tests;
+namespace Leknoppix\Cloudflare\Tests;
 
 use Illuminate\Support\Facades\Event;
-use Suitmedia\Cloudflare\Events\ModelHasUpdated;
-use Suitmedia\Cloudflare\Tests\Supports\Models\Post;
-use Suitmedia\Cloudflare\Tests\Supports\Models\User;
+use Leknoppix\Cloudflare\Events\ModelHasUpdated;
+use Leknoppix\Cloudflare\Tests\Supports\Models\Post;
+use Leknoppix\Cloudflare\Tests\Supports\Models\User;
+use Leknoppix\Cloudflare\Tests\TestCase;
 
 class CloudflareObserverTests extends TestCase
 {

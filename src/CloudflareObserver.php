@@ -1,16 +1,16 @@
 <?php
 
-namespace Suitmedia\Cloudflare;
+namespace Leknoppix\Cloudflare;
 
 use Illuminate\Database\Eloquent\Model;
-use Suitmedia\Cloudflare\Events\ModelHasUpdated;
+use Leknoppix\Cloudflare\Events\ModelHasUpdated;
 
 class CloudflareObserver
 {
     /**
      * Cloudflare Service Object.
      *
-     * @var \Suitmedia\Cloudflare\CloudflareService
+     * @var \Leknoppix\Cloudflare\CloudflareService
      */
     protected $cloudflare;
 

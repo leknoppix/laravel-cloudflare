@@ -1,9 +1,9 @@
 <?php
 
-namespace Suitmedia\Cloudflare;
+namespace Leknoppix\Cloudflare;
 
 use GuzzleHttp\Client;
-use Suitmedia\Cloudflare\Concerns\PurgeCloudflareCache;
+use Leknoppix\Cloudflare\Concerns\PurgeCloudflareCache;
 
 class CloudflareService
 {

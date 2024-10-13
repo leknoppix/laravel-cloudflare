@@ -1,11 +1,11 @@
 <?php
 
-namespace Suitmedia\Cloudflare\Concerns;
+namespace Leknoppix\Cloudflare\Concerns;
 
 use Exception;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Cache;
-use Suitmedia\Cloudflare\CloudflareService;
+use Leknoppix\Cloudflare\CloudflareService;
 
 trait PurgeCloudflareCache
 {

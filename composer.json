@@ -1,9 +1,9 @@
 {
-  "name": "suitmedia/laravel-cloudflare",
+  "name": "leknoppix/laravel-cloudflare",
   "description": "Simple and easy cloudflare cache purging in Laravel",
   "type": "library",
   "license": "MIT",
-  "homepage": "https://github.com/suitmedia/laravel-cloudflare",
+  "homepage": "https://github.com/leknoppix/laravel-cloudflare",
   "keywords": [
     "laravel",
     "laravel-package",
@@ -16,8 +16,8 @@
     }
   ],
   "support": {
-    "issues": "https://github.com/suitmedia/laravel-cloudflare/issues",
-    "source": "https://github.com/suitmedia/laravel-cloudflare"
+    "issues": "https://github.com/leknoppix/laravel-cloudflare/issues",
+    "source": "https://github.com/leknoppix/laravel-cloudflare"
   },
   "require": {
     "php": "^7.4|^8.0",
@@ -41,22 +41,22 @@
   },
   "autoload": {
     "psr-4": {
-      "Suitmedia\\Cloudflare\\": "src"
+      "Leknoppix\\Cloudflare\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Suitmedia\\Cloudflare\\Tests\\": "tests/",
+      "Leknoppix\\Cloudflare\\Tests\\": "tests/",
       "Database\\Factories\\": "tests/Supports/Factories/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Suitmedia\\Cloudflare\\ServiceProvider"
+        "Leknoppix\\Cloudflare\\ServiceProvider"
       ],
       "aliases": {
-        "Cloudflare": "Suitmedia\\Cloudflare\\Facade"
+        "Cloudflare": "Leknoppix\\Cloudflare\\Facade"
       }
     }
   },

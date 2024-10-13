@@ -1,13 +1,13 @@
 <?php
 
-namespace Suitmedia\Cloudflare\Tests\Concerns;
+namespace Leknoppix\Cloudflare\Tests\Concerns;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
-use Suitmedia\Cloudflare\CloudflareService;
-use Suitmedia\Cloudflare\Tests\TestCase;
+use Leknoppix\Cloudflare\CloudflareService;
+use Leknoppix\Cloudflare\Tests\TestCase;
 
 class PurgeCloudflareCacheTests extends TestCase
 {
@@ -35,7 +35,7 @@ class PurgeCloudflareCacheTests extends TestCase
     /**
      * Cloudflare service object.
      *
-     * @var \Suitmedia\Cloudflare\CloudflareService
+     * @var \Leknoppix\Cloudflare\CloudflareService
      */
     protected $service;
 

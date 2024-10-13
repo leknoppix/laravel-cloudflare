@@ -1,16 +1,16 @@
 <?php
 
-namespace Suitmedia\Cloudflare\Tests;
+namespace Leknoppix\Cloudflare\Tests;
 
 use GuzzleHttp\Client;
-use Suitmedia\Cloudflare\CloudflareService;
+use Leknoppix\Cloudflare\CloudflareService;
 
 class CloudflareServiceTests extends TestCase
 {
     /**
      * Cloudflare service object.
      *
-     * @var \Suitmedia\Cloudflare\CloudflareService
+     * @var \Leknoppix\Cloudflare\CloudflareService
      */
     protected $service;
 

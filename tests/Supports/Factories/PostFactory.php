@@ -3,7 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Suitmedia\Cloudflare\Tests\Supports\Models\Post;
+use Leknoppix\Cloudflare\Tests\Supports\Models\Post;
 
 class PostFactory extends Factory
 {
