@@ -1,7 +1,7 @@
 [![Build Status](https://github.com/leknoppix/laravel-cloudflare/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/leknoppix/laravel-cloudflare/actions/workflows/main.yml)
-[![codecov](https://codecov.io/gh/leknoppix/laravel-cloudflare/branch/main/graph/badge.svg?token=5EK3CL6SYE)](https://codecov.io/gh/suitmedia/laravel-cloudflare)
+[![codecov](https://codecov.io/gh/leknoppix/laravel-cloudflare/branch/main/graph/badge.svg?token=5EK3CL6SYE)](https://codecov.io/gh/leknoppix/laravel-cloudflare)
 [![Total Downloads](https://poser.pugx.org/leknoppix/laravel-cloudflare/d/total.svg)](https://packagist.org/packages/leknoppix/laravel-cloudflare)
-[![Latest Stable Version](https://poser.pugx.org/leknoppix/laravel-cloudflare/v/stable.svg)](https://packagist.org/leknoppix/suitmedia/laravel-cloudflare)
+[![Latest Stable Version](https://poser.pugx.org/leknoppix/laravel-cloudflare/v/stable.svg)](https://packagist.org/leknoppix/laravel-cloudflare)
 [![License: MIT](https://poser.pugx.org/leknoppix/laravel-cloudflare/license.svg)](https://opensource.org/licenses/MIT)
 
 # Laravel Cloudflare
